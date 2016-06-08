@@ -1,5 +1,5 @@
-# STR_blocks.pl
+# BaitSTR_type.pl
 Script for use with the baitSTR pipeline.
 
 Usage:
-perl STR_blocks.pl --stem [stem] [options]
+perl BaitSTR_type.pl --stem [stem] [options]
