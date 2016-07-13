@@ -93,4 +93,8 @@ Fastq read files are provide in a whitespace-separated list of "file,sample1 fil
 If you have previously built an alignment and would like to run allelotype only, provide bam files in the same way:
 
 	perl BaitSTR_type.pl --index_prefix [indexPrefix] --allelotype --mem --bam Tatiana.bam,Tatiana Oberon.bam,Oberon
+
+To use bwa-MEM, you must be using lobSTR v.4. The latest version (4.0.5 at this time) is the best at handling heterozygous calls, and is highly recommended.
+
+SAMtools v 1.2 sometimes struggles with single-read duplicate removal. If you find this to be the case, try v 0.1.19.
 	
