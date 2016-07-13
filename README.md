@@ -89,3 +89,8 @@ If using --align or --full, you must provide reads, either paired (--r1 and --r2
 Fastq read files are provide in a whitespace-separated list of "file,sample1 file,sample2 file,sample3...". You must provide matching --r1 and --r2 files to use paired reads, but you can provide as many read files as you like per sample. For example:
 
 	perl BaitSTR_type.pl --index_prefix [indexPrefix] --align --mem --r1 Tatiana.R1.fastq.gz,Tatiana Oberon.R1.fastq.gz,Oberon --r2 Tatiana.R2.fastq.gz,Tatiana Oberon.R2.fastq.gz,Oberon
+
+If you have previously built an alignment and would like to run allelotype only, provide bam files in the same way:
+
+	perl BaitSTR_type.pl --index_prefix [indexPrefix] --allelotype --mem --bam Tatiana.bam,Tatiana Oberon.bam,Oberon
+	
