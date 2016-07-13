@@ -62,20 +62,24 @@ Options:
 #Details for running BaitSTR_type.pl
 
 Each run requires, at a minimum:
+
 	--stem [str]: This is the prefix used for all outfiles generated.
 	--index_prefix [str]: Either a new index prefix or one referring to a previously built index
 
 In addition, choose an alignment strategy:
+
 	--mem uses bwa-MEM
 	--lobSTR uses lobSTR alignment
 
 And choose one or more functions:
+
 	--full runs the entire pipeline, aligning reads, calling genotypes (vcf file output), and designing probes
 	--align just aligns reads
 	--allelotype just calls genotypes (using lobSTR's "allelotype" function)
 	--design_probes designs probes
 
 You must either provide an index prefix from a previous run of BaitSTR_type.pl, or create a new one. To create a new index:
+
 	perl BaitSTR_type.pl --index --index_prefix [newPrefix] --target [blocks.fa] [...]
 
 You can constrain the index to blocks of a minimum overall length (--minlen) or non-repeat flank (--flank).
