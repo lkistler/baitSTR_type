@@ -2,7 +2,7 @@
 Script for use with the baitSTR pipeline.
 
 Provide "blocks" fasta file from the extend_STR_reads script (BaitSTR), and this companion script uses lobSTR and/or BWA to 
-prepare reference sequence files and align one or more sample datasets. Optionally, you can also generate probe sequences.
+prepare reference sequence files and align one or more sample datasets. Optionally, you can also generate probe sequences. You may ONLY use the BaitSTR output blocks as reference sequences for this script, as the fasta headers contain critical information.
 
 Usage:
 
