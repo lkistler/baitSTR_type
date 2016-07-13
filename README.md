@@ -49,7 +49,10 @@ Options:
 	--fasta				Reads are in fasta format (default fastq; specify for lobSTR)
 	--minlen [n]			Minimum block length to include in analysis (400)
 	--flank [n]			Minimum non-repeat flank length in block (200)
-	--alnflank [n]			Minimum aligned read flank in backtrack (15)
+	--alnflank [n]			Minimum aligned read flank in backtrack only (15)
+        --probes_per_locus [n]		Number of probes per locus [4]
+        --probe_length [n]		length of probes [100]
+        --probe_stagger	[n]		Stagger distance between probes [20]
 	--mincvg [n]			Minimum callable-read coverage in backtrack (5)
 	--minallele [n]			Minimum callable-reads per allele (2)
 	--no_rmdup			Do not perform duplicate removal following read alignment
@@ -58,4 +61,21 @@ Options:
 
 #Details for running BaitSTR_type.pl
 
-Each run 
+Each run requires, at a minimum:
+--stem [str]: This is the prefix used for all outfiles generated.
+--index_prefix [str]: Either a new index prefix or one referring to a previously built index
+
+In addition, choose an alignment strategy:
+--mem uses bwa-MEM
+--lobSTR uses lobSTR alignment
+
+And choose one or more functions:
+--full runs the entire pipeline, aligning reads, calling genotypes (vcf file output), and designing probes
+--align just aligns reads
+--allelotype just calls genotypes (using lobSTR's "allelotype" function)
+--design_probes designs probes
+
+You must either provide an index prefix from a previous run of BaitSTR_type.pl, or create a new one. To create a new index:
+perl BaitSTR_type.pl --index --index_prefix [newPrefix] --target [blocks.fa] [...]
+
+You can constrain the index to blocks of a minimum overall length (--minlen) or non-repeat flank (--flank).
