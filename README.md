@@ -5,12 +5,12 @@ Provide "blocks" fasta file from the extend_STR_reads script (BaitSTR), and this
 prepare reference sequence files and align one or more sample datasets. Optionally, you can also generate probe sequences.
 
 Usage:
-perl BaitSTR_type.pl --stem [stem] [options]
+	perl BaitSTR_type.pl --stem [stem] [options]
 
 Sample usage:
-perl BaitSTR_type.pl --stem my_run --full --index --target Blocks.fasta --index_prefix newIndexFiles \
-  --r1 reads.r1.sample1.fastq,sample1 reads.r1.sample2.fastq,sample2 \
-  --r2 reads.r2.sample1.fastq,sample1 reads.r2.sample2.fastq,sample2 \
+	perl BaitSTR_type.pl --stem my_run --full --index --target Blocks.fasta --index_prefix newIndexFiles \
+  	--r1 reads.r1.sample1.fastq,sample1 reads.r1.sample2.fastq,sample2 \
+  	--r2 reads.r2.sample1.fastq,sample1 reads.r2.sample2.fastq,sample2 \
   
 Options:
 	--index			            Create index files (requires --target)
