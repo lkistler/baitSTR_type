@@ -50,9 +50,9 @@ Options:
 	--minlen [n]			Minimum block length to include in analysis (400)
 	--flank [n]			Minimum non-repeat flank length in block (200)
 	--alnflank [n]			Minimum aligned read flank in backtrack only (15)
-        --probes_per_locus [n]		Number of probes per locus [4]
-        --probe_length [n]		length of probes [100]
-        --probe_stagger	[n]		Stagger distance between probes [20]
+	--probes_per_locus [n]		Number of probes per locus [4]
+	--probe_length [n]		length of probes [100]
+	--probe_stagger	[n]		Stagger distance between probes [20]
 	--mincvg [n]			Minimum callable-read coverage in backtrack (5)
 	--minallele [n]			Minimum callable-reads per allele (2)
 	--no_rmdup			Do not perform duplicate removal following read alignment
