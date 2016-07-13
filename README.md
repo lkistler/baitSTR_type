@@ -85,4 +85,5 @@ You must either provide an index prefix from a previous run of BaitSTR_type.pl, 
 You can constrain the index to blocks of a minimum overall length (--minlen) or non-repeat flank (--flank).
 
 If using --align or --full, you must provide reads, either paired (--r1 and --r2) or single (--SR). You can provide as many read files as you like per sample.
+
 Read files are provide in a whitespace-separated list of "file,sample file,sample file,sample";
