@@ -86,4 +86,6 @@ You can constrain the index to blocks of a minimum overall length (--minlen) or 
 
 If using --align or --full, you must provide reads, either paired (--r1 and --r2) or single (--SR).
 
-Fastq read files are provide in a whitespace-separated list of "file,sample1 file,sample2 file,sample3...". You must provide matching --r1 and --r2 files to use paired reads, but you can provide as many read files as you like per sample.
+Fastq read files are provide in a whitespace-separated list of "file,sample1 file,sample2 file,sample3...". You must provide matching --r1 and --r2 files to use paired reads, but you can provide as many read files as you like per sample. For example:
+
+	perl BaitSTR_type.pl --index_prefix [indexPrefix] --align --mem --r1 Tatiana.R1.fastq.gz,Tatiana Oberon.R1.fastq.gz,Oberon --r2 Tatiana.R2.fastq.gz,Tatiana Oberon.R2.fastq.gz,Oberon
