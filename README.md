@@ -9,8 +9,8 @@ perl BaitSTR_type.pl --stem [stem] [options]
 
 Sample usage:
 perl BaitSTR_type.pl --stem my_run --full --index --target Blocks.fasta --index_prefix newIndexFiles \
-  --r1 reads.r1.sample1.fastq,sample1 reads.r1.sample2.fastq,sample2
-  --r2 reads.r2.sample1.fastq,sample1 reads.r2.sample2.fastq,sample2
+  --r1 reads.r1.sample1.fastq,sample1 reads.r1.sample2.fastq,sample2 \
+  --r2 reads.r2.sample1.fastq,sample1 reads.r2.sample2.fastq,sample2 \
   
 Options:
 	--index			            Create index files (requires --target)
@@ -26,7 +26,7 @@ Options:
 	--index_prefix [str]	  Prefix for index files
 	--target [str]		      Fasta file of extended blocks from BaitSTR output
 
-  Read files. Sample IDs must be given for each read file, multiple files are allowed per sample ID.
+  	Read files. Sample IDs must be given for each read file, multiple files are allowed per sample ID.
 	--r1 [str]		          Forward reads in format "infile.R1.fastq,sampleID [file2,id2 file3,id3...]", requires --r2 with corresponding sample IDs
 	--r2 [str]		          Reverse reads in format "infile.R2.fastq,sampleID", requires --r1 with corresponding sample IDs
 	--SR [str]		          Unpaired reads in format "infile.fastq,sampleID [file2,id2 file3,id3...]"
